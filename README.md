@@ -1,2 +1,2 @@
-# tdd-dotnet
-Test Driven Development (TDD) in .NET
+# TDD Katas - Java
+Test Driven Development (TDD) in Java
