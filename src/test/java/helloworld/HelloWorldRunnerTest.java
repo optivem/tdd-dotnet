@@ -1,9 +1,12 @@
+package helloworld;
+
+import helloworld.HelloWorldRunner;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class HelloWorldRunnerTest {
     @Test
-    public void shouldRunHelloWorld() {
+    void shouldRunHelloWorld() {
         HelloWorldRunner runner = new HelloWorldRunner();
         String result = runner.run();
 
