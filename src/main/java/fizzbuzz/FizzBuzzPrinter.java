@@ -22,15 +22,16 @@ public class FizzBuzzPrinter {
 
     private String getLine(int i) {
         var isFizz = isDivisibleBy(i, FIZZ_MOD);
-        var isBuzz = isDivisibleBy(i, BUZZ_MOD);
-
         if(isFizz) {
             return FIZZ_LINE;
-        } else if(isBuzz) {
-            return BUZZ_LINE;
-        } else {
-            return Integer.toString(i);
         }
+
+        var isBuzz = isDivisibleBy(i, BUZZ_MOD);
+        if(isBuzz) {
+            return BUZZ_LINE;
+        }
+
+        return Integer.toString(i);
     }
 
     private boolean isDivisibleBy(int i, int mod) {
