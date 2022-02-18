@@ -11,4 +11,8 @@ public class HelloWorldRunner {
     public String runner2() {
         return "me";
     }
+
+    public String runner3() {
+        return "me353";
+    }
 }
