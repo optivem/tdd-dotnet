@@ -6,6 +6,7 @@ public class FizzBuzzPrinter {
 
     private static String FIZZ_LINE = "Fizz";
     private static String BUZZ_LINE = "Buzz";
+    private static String FIZZBUZZ_LINE = "FizzBuzz";
 
     private Printer printer;
 
@@ -22,11 +23,17 @@ public class FizzBuzzPrinter {
 
     private String getLine(int i) {
         var isFizz = isDivisibleBy(i, FIZZ_MOD);
+        var isBuzz = isDivisibleBy(i, BUZZ_MOD);
+
+        var isFizzBuzz = isFizz && isBuzz;
+        if(isFizzBuzz) {
+            return FIZZBUZZ_LINE;
+        }
+
         if(isFizz) {
             return FIZZ_LINE;
         }
 
-        var isBuzz = isDivisibleBy(i, BUZZ_MOD);
         if(isBuzz) {
             return BUZZ_LINE;
         }

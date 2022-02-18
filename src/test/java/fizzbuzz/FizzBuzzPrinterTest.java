@@ -95,4 +95,23 @@ class FizzBuzzPrinterTest {
         List<String> lines = printer.getLines();
         Assertions.assertLinesMatch(expectedLines, lines);
     }
+
+    @Test
+    void canPrintFizzBuzz1To31() {
+        // Arrange
+        int start = 1;
+        int end = 31;
+        List<String> expectedLines = Arrays.asList("1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz",
+                "11", "Fizz", "13", "14", "FizzBuzz", "16", "17", "Fizz", "19", "Buzz",
+                "Fizz", "22", "23", "Fizz", "Buzz", "26", "Fizz", "28", "29", "FizzBuzz", "31");
+        FakePrinter printer = new FakePrinter();
+        FizzBuzzPrinter fizzBuzzPrinter = new FizzBuzzPrinter(printer);
+
+        // Act
+        fizzBuzzPrinter.print(start, end);
+
+        // Assert
+        List<String> lines = printer.getLines();
+        Assertions.assertLinesMatch(expectedLines, lines);
+    }
 }
