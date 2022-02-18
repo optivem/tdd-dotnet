@@ -45,4 +45,21 @@ class FizzBuzzPrinterTest {
         Assertions.assertLinesMatch(expectedLines, lines);
     }
 
+    @Test
+    void printFizzForMultiplesOf3() {
+        // Arrange
+        int start = 1;
+        int end = 10;
+        List<String> expectedLines = Arrays.asList("1", "2", "Fizz", "4", "5", "Fizz", "7", "8", "Fizz", "10");
+        FakePrinter printer = new FakePrinter();
+        FizzBuzzPrinter fizzBuzzPrinter = new FizzBuzzPrinter(printer);
+
+        // Act
+        fizzBuzzPrinter.print(start, end);
+
+        // Assert
+        List<String> lines = printer.getLines();
+        Assertions.assertLinesMatch(expectedLines, lines);
+    }
+
 }

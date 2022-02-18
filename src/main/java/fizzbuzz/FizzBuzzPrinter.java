@@ -9,8 +9,12 @@ public class FizzBuzzPrinter {
 
     public void print(int start, int end) {
         for(int i = start; i <= end; i++) {
-            var line = Integer.toString(i);
-            printer.print(line);
+            if(i % 3 == 0) {
+                printer.print("Fizz");
+            } else {
+                var line = Integer.toString(i);
+                printer.print(line);
+            }
         }
     }
 }
