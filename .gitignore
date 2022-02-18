@@ -161,6 +161,9 @@ gradle-app.setting
 
 
 # Additional
-.gradle/6.7/executionHistory/
-.gradle/**/fileHashes/
-.gradle/buildOutputCleanup/
+
+.gradle/6.7/executionHistory/executionHistory.bin
+.gradle/6.7/executionHistory/executionHistory.lock
+.gradle/6.7/fileHashes/fileHashes.bin
+.gradle/6.7/fileHashes/fileHashes.lock
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
