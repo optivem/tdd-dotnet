@@ -1,28 +1,31 @@
 package fizzbuzz;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class FizzBuzzConverter {
-    private static int FIZZ_MOD = 3;
-    private static int BUZZ_MOD = 5;
+    private static List<FizzBuzzEntry> DEFAULT_ENTRIES = Arrays.asList(new FizzBuzzEntry(15, "FizzBuzz"),
+            new FizzBuzzEntry(3, "Fizz"),
+            new FizzBuzzEntry(5, "Buzz"));
 
-    private static String FIZZ_LINE = "Fizz";
-    private static String BUZZ_LINE = "Buzz";
-    private static String FIZZBUZZ_LINE = "FizzBuzz";
+    private List<FizzBuzzEntry> entries;
 
-    public static String getLine(int i) {
-        var isFizz = MathUtilities.isDivisibleBy(i, FIZZ_MOD);
-        var isBuzz = MathUtilities.isDivisibleBy(i, BUZZ_MOD);
+    public static FizzBuzzConverter INSTANCE = new FizzBuzzConverter();
 
-        var isFizzBuzz = isFizz && isBuzz;
-        if(isFizzBuzz) {
-            return FIZZBUZZ_LINE;
-        }
+    public FizzBuzzConverter(List<FizzBuzzEntry> entries) {
+        this.entries = entries;
+    }
 
-        if(isFizz) {
-            return FIZZ_LINE;
-        }
+    public FizzBuzzConverter() {
+        this(DEFAULT_ENTRIES);
+    }
 
-        if(isBuzz) {
-            return BUZZ_LINE;
+    public String getLine(int i) {
+        for (FizzBuzzEntry entry : entries) {
+            var isDivisible = MathUtilities.isDivisibleBy(i, entry.getMod());
+            if(isDivisible) {
+                return entry.getLine();
+            }
         }
 
         return Integer.toString(i);

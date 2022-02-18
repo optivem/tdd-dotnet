@@ -11,7 +11,7 @@ public class FizzBuzzPrinter {
 
     public void print(int start, int end) {
         for(int i = start; i <= end; i++) {
-            String line = FizzBuzzConverter.getLine(i);
+            String line = FizzBuzzConverter.INSTANCE.getLine(i);
             printer.print(line);
         }
     }
