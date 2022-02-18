@@ -8,6 +8,8 @@ public class FizzBuzzPrinter {
     }
 
     public void print(int start, int end) {
-        printer.print(Integer.toString(start));
+        for(int i = start; i <= end; i++) {
+            printer.print(Integer.toString(i));
+        }
     }
 }
