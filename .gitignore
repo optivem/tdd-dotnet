@@ -167,3 +167,4 @@ gradle-app.setting
 .gradle/6.7/fileHashes/fileHashes.bin
 .gradle/6.7/fileHashes/fileHashes.lock
 .gradle/buildOutputCleanup/buildOutputCleanup.lock
+.idea/sonarlint/issuestore/index.pb
