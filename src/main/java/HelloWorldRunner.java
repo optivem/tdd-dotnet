@@ -7,12 +7,4 @@ public class HelloWorldRunner {
     public String run() {
         return "Hello world!";
     }
-
-    public String runner2() {
-        return "me";
-    }
-
-    public String runner3() {
-        return "me353";
-    }
 }
