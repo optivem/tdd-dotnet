@@ -29,11 +29,11 @@ class FizzBuzzPrinterTest {
     }
 
     @Test
-    void canPrintNumbers1To5() {
+    void canPrintNumbers1To2() {
         // Arrange
         int start = 1;
-        int end = 5;
-        List<String> expectedLines = Arrays.asList("1", "2", "3", "4", "5");
+        int end = 2;
+        List<String> expectedLines = Arrays.asList("1", "2");
         FakePrinter printer = new FakePrinter();
         FizzBuzzPrinter fizzBuzzPrinter = new FizzBuzzPrinter(printer);
 
