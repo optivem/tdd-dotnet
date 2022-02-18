@@ -2,7 +2,10 @@ package fizzbuzz;
 
 public class FizzBuzzPrinter {
     private static int FIZZ_MOD = 3;
+    private static int BUZZ_MOD = 5;
+
     private static String FIZZ_LINE = "Fizz";
+    private static String BUZZ_LINE = "Buzz";
 
     private Printer printer;
 
@@ -19,9 +22,12 @@ public class FizzBuzzPrinter {
 
     private String getLine(int i) {
         var isFizz = isDivisibleBy(i, FIZZ_MOD);
+        var isBuzz = isDivisibleBy(i, BUZZ_MOD);
 
         if(isFizz) {
             return FIZZ_LINE;
+        } else if(isBuzz) {
+            return BUZZ_LINE;
         } else {
             return Integer.toString(i);
         }
