@@ -7,4 +7,8 @@ public class HelloWorldRunner {
     public String run() {
         return "Hello world!";
     }
+
+    public String runner2() {
+        return "me";
+    }
 }
