@@ -9,7 +9,8 @@ public class FizzBuzzPrinter {
 
     public void print(int start, int end) {
         for(int i = start; i <= end; i++) {
-            printer.print(Integer.toString(i));
+            var line = Integer.toString(i);
+            printer.print(line);
         }
     }
 }
